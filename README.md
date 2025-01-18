@@ -1,6 +1,7 @@
 ### Project: OOP TASK 1
 
 ---
+The task was done in typescript and compiled to javascript. *ts* folder contains the typescript code and *js* contains the javascript.
 
 #### Banking Management System
 ##### **TITLE**
