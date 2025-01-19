@@ -7,7 +7,7 @@ class Bank {
     pin;
     balance;
     constructor({ bankName, fullName, pin }) {
-        this.accountNumber = Bank.generateAccountNumber({ bankName });
+        this.accountNumber = Bank.generateAccountNumber(bankName);
         this.bankName = Bank.validBankNames.includes(bankName) ? bankName : "invalid bank name";
         this.balance = 0;
         this.pin = Bank.validatePin(pin);
@@ -48,7 +48,7 @@ class Bank {
         this.withdraw(amount, pin);
         account.deposit(amount);
     }
-    static generateAccountNumber({ bankName }) {
+    static generateAccountNumber(bankName) {
         if (!Bank.validBankNames.includes(bankName)) {
             throw new Error("Invalid bank name");
         }
